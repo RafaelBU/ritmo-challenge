@@ -13,15 +13,15 @@ export const HeaderTitle = styled.h1`
   color: white;
 `;
 
-export const BodyContainer = styled.div`
+export const ContentContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: red;
   margin: 20px;
 `;
 
-export const Container = styled.div`
+export const ArticlesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
+  justify-content: center;
 `;
