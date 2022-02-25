@@ -10,7 +10,12 @@ export const Header = styled.div`
 `;
 
 export const HeaderTitle = styled.h1`
+  font-size: 24px;
   color: white;
+
+  @media (min-width: 480px) {
+    font-size: 32px;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -23,5 +28,9 @@ export const ContentContainer = styled.div`
 export const ArticlesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+
+  @media (min-width: 1024px) {
+    justify-content: start;
+  }
 `;
