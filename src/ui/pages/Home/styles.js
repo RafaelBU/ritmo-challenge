@@ -23,5 +23,5 @@ export const ContentContainer = styled.div`
 export const ArticlesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 `;
