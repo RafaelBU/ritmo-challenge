@@ -5,7 +5,8 @@ import fetchFilterArticles from "../../domain/Article/useCases/fetchFilterArticl
 export default function useFetchArticles({
   isFiltering,
   setIsFiltering,
-  filters,
+  sortFilter,
+  facedFilter,
 }) {
   const [isLoading, setIsLoading] = useState(true);
   const [articles, setArticles] = useState([]);
@@ -32,7 +33,9 @@ export default function useFetchArticles({
   const fetchFilterArticlesAction = useCallback(async () => {
     try {
       setIsLoading(true);
-      const response = await fetchFilterArticles({ filters });
+      const response = await fetchFilterArticles({
+        filters: { sortFilter, facedFilter },
+      });
       setArticles(response);
     } catch (error) {
       console.error(error);
@@ -40,7 +43,7 @@ export default function useFetchArticles({
       setIsLoading(false);
       setIsFiltering(false);
     }
-  }, [filters, setIsFiltering]);
+  }, [sortFilter, facedFilter, setIsFiltering]);
 
   useEffect(() => {
     if (isFiltering) {

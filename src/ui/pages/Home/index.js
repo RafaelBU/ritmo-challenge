@@ -25,10 +25,8 @@ export default function Home() {
   const { isLoading, articles } = useFetchArticles({
     isFiltering,
     setIsFiltering,
-    filters: {
-      sortFilter,
-      facedFilter,
-    },
+    sortFilter,
+    facedFilter,
   });
 
   const filterConfig = {
